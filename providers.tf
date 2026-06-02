@@ -8,6 +8,12 @@ terraform {
   }
 }
 
+variable "subscription_id" {
+  type        = string
+  description = "El ID de la suscripción de Azure"
+}
+
 provider "azurerm" {
+  subscription_id = var.subscription_id
   features {}
 }
